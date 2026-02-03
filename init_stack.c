@@ -6,12 +6,11 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 18:22:08 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/03 10:52:09 by raulp            ###   ########.fr       */
+/*   Updated: 2026/02/03 13:02:16 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "libft.h"
 
 void init_stack_a(t_stack_node **a, char **argv)
 {

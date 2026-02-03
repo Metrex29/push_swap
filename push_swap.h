@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/03 11:27:41 by raulp            ###   ########.fr       */
+/*   Updated: 2026/02/03 13:02:11 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <unistd.h>
+# include "libft/libft.h"
+
 
 typedef struct s_stack_node
 {

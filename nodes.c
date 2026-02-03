@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 15:15:37 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/02 18:23:54 by raulp            ###   ########.fr       */
+/*   Updated: 2026/02/03 12:51:39 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void add_node_back(t_stack_node **stack, t_stack_node *new_node)
 
 	if (!stack || !new_node)
 		return;
-		
+
 	if (!*stack)
 	{
 		*stack = new_node;
@@ -116,4 +116,3 @@ void add_node_back(t_stack_node **stack, t_stack_node *new_node)
 	// El nuevo apunta al que era el último como su anterior
 	new_node->prev = last_node;
 }
-
