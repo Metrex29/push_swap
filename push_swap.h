@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/02 15:57:00 by raulp            ###   ########.fr       */
+/*   Updated: 2026/02/03 11:27:41 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,9 @@ typedef struct s_stack_node
 
 // Prototipos
 t_stack_node	*ft_new_node(int value);
+int				check_duplicates(t_stack_node *stack, int n);
+void			add_node_back(t_stack_node **stack, t_stack_node *new_node);
+void			init_stack_a(t_stack_node **a, char **argv);
+
 
 #endif
