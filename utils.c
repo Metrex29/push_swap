@@ -1,0 +1,68 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/11 12:00:11 by cpicon-m          #+#    #+#             */
+/*   Updated: 2026/02/12 17:53:06 by cpicon-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+/**
+ * ft_index_node - assign a rank index to each node based on values in the list
+ *
+ * @stack: pointer to the head of a singly linked list of t_stack_node.
+ *
+ * For each node in the list this function counts how many nodes contain a
+ * strictly smaller `value` and stores that count in the node's `index` field.
+ * The smallest value(s) receive index 0; larger values receive an index equal
+ * to the number of strictly smaller elements in the list.
+ *
+ * Return: void
+ *
+ * Complexity: O(n^2) time (double traversal), O(1) extra space.
+ *
+ * Side effects:
+ *  - Overwrites the `index` member of every node in the list.
+ *
+ * Preconditions / assumptions:
+ *  - Each node in the list has accessible `value`, `index`, and `next` members.
+ *  - `stack` is either NULL (no-op) or a properly terminated singly linked list.
+ *
+ * Notes / cautions:
+ *  - The current implementation must ensure the counter used for counting is
+ *    reinitialized for each node (i.e., set to 0 inside the outer loop);
+ *    otherwise the computed indices will be incorrect.
+ *  - Duplicate values will result in identical indices for those nodes.
+ */
+void ft_index_node(t_stack_node *stack)
+{
+	t_stack_node	*current;
+	t_stack_node	*cmp;
+	int				i;
+
+	i = 0;
+	current = stack;
+	while (current)
+	{
+		cmp = stack;
+		while (cmp)
+		{
+			if (cmp->value < current->value)
+				i++;
+			cmp = cmp->next;
+		}
+		current->index = i;
+		current = current->next;
+	}
+}
+
+int	get_range(int	range)
+{
+	
+};
+

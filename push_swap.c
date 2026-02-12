@@ -1,39 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checkers.c                                         :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/02 19:11:44 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/11 14:50:50 by cpicon-m         ###   ########.fr       */
+/*   Created: 2026/02/03 11:24:50 by raulp             #+#    #+#             */
+/*   Updated: 2026/02/12 16:03:24 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int check_duplicates(t_stack_node *stack, int n)
+int main(int argc, char **argv)
 {
-	if(!stack)
-		return 0;
-	while (stack)
-	{
-		if(stack ->value == n)
-			return 1;
-		stack = stack -> next;
-	}
-	return 0;
-}
+	t_stack_node	*a;
+	t_stack_node	*b;
+	int				len;
 
-int	is_sorted(t_stack_node *stack)
-{
-	if(!stack)
-		return 1;
-	while(stack)
+	a = NULL;
+	b = NULL;
+
+	if (argc < 2)
+		return 0;
+
+	// algoritmo de agregar nodos al stack a
+	init_stack_a(&a, argv + 1);
+	if(is_sorted(a))
+		return (0);
+	ft_index_node(a);
+	len = stack_len(a);
+	if (len == 2)
+		sa(a);
+	else if (len == 3)
+		sort_three(a);
+	else if (len == 4)
+		sort_four(a,b);
+	else if (len == 5)
+		sort_five(a,b);
+	else
 	{
-		if(stack->value > stack->next->value)
-			return 1;
-		stack = stack->next;
+		
 	}
+	
+	
+	// algoritmo de ordenacion
+	
 	return 0;
 }
