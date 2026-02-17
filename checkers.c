@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 19:11:44 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/11 14:50:50 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:17:35 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int check_duplicates(t_stack_node *stack, int n)
 
 int	is_sorted(t_stack_node *stack)
 {
-	if(!stack)
-		return 1;
-	while(stack)
+	if (!stack || !stack->next)
+		return (1);
+	while(stack->next)
 	{
 		if(stack->value > stack->next->value)
-			return 1;
+			return 0;
 		stack = stack->next;
 	}
-	return 0;
+	return 1;
 }

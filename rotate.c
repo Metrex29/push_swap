@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 14:01:16 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/10 16:37:30 by raulp            ###   ########.fr       */
+/*   Updated: 2026/02/17 15:18:26 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void ft_rotate(t_stack_node **stack)
 {
-	t_stack_node *a;
-	t_stack_node *b;
+	t_stack_node	*first;
+	t_stack_node	*last;
 
-	if(!stack || !*stack || !(*stack)->next)
-		return;
-	a = *stack;
-	b = (*stack)->next;
-
-	*stack = b;
-	b->prev = NULL;
-	a->next = NULL;
-	add_node_back(stack, a);
+	if (!stack || !*stack || !(*stack)->next)
+		return ;
+	first = *stack;
+	*stack = first->next;
+	(*stack)->prev = NULL;
+	last = find_last(*stack);
+	last->next = first;
+	first->prev = last;
+	first->next = NULL;
 }
 void ra(t_stack_node **a)
 {

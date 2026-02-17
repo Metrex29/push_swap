@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:00:11 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 15:07:52 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:26:48 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void ft_index_node(t_stack_node *stack)
 	current = stack;
 	while (current)
 	{
+		i = 0;
 		cmp = stack;
 		while (cmp)
 		{
