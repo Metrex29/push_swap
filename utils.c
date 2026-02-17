@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:00:11 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/12 17:53:06 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 10:37:30 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,10 @@ void ft_index_node(t_stack_node *stack)
 	}
 }
 
-int	get_range(int	range)
+int	get_range(int len)
 {
-	
-};
+	if(len <= 100)
+		return (16);
+	return (32);
+}
 

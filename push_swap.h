@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/12 16:01:10 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 10:37:48 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ void			pb(t_stack_node **a, t_stack_node **b);
 void			sort_three(t_stack_node **stack);
 void			sort_four(t_stack_node **a, t_stack_node **b);
 void			sort_five(t_stack_node **a, t_stack_node **b);
+
+// utils
+int	get_range(int len);
 
 
 
