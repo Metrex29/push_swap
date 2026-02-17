@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 11:24:50 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/12 16:03:24 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:13:02 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,17 @@ int main(int argc, char **argv)
 	ft_index_node(a);
 	len = stack_len(a);
 	if (len == 2)
-		sa(a);
+		sa(&a);
 	else if (len == 3)
-		sort_three(a);
+		sort_three(&a);
 	else if (len == 4)
-		sort_four(a,b);
+		sort_four(&a,&b);
 	else if (len == 5)
-		sort_five(a,b);
+		sort_five(&a,&b);
 	else
 	{
-		
-	}
-	
-	
-	// algoritmo de ordenacion
-	
+		push_to_b(&a, &b, get_range(len));
+		push_to_a(&a, &b);
+	}	
 	return 0;
 }

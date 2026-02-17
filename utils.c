@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:00:11 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 14:23:58 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:07:52 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ int get_pos(t_stack_node *stack, t_stack_node *objetive)
 		if(stack == objetive)
 			return pos;
 		pos++;
-		stack->next;
+		stack = stack->next;
 	}
 	return (pos);
 }

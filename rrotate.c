@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrotate.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 15:51:27 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/10 16:36:47 by raulp            ###   ########.fr       */
+/*   Updated: 2026/02/17 15:07:19 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void ft_rrotate(t_stack_node **stack)
 {
-
-	t_stack_node *a;
 	t_stack_node *last_node;
 	t_stack_node *pre_last;
 

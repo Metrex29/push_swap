@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 14:37:12 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:07:01 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_stack_node
 
 // Prototipos
 t_stack_node	*ft_new_node(int value);
+t_stack_node	*find_last(t_stack_node *stack);
 int				check_duplicates(t_stack_node *stack, int n);
 void			add_node_back(t_stack_node **stack, t_stack_node *new_node);
 void			init_stack_a(t_stack_node **a, char **argv);
@@ -64,5 +65,10 @@ void			sort_five(t_stack_node **a, t_stack_node **b);
 int				get_range(int len);
 t_stack_node	*find_max(t_stack_node *stack);
 int				get_pos(t_stack_node *stack, t_stack_node *objetive);
+//ksort
+void push_to_b(t_stack_node **a, t_stack_node **b, int range);
+void push_to_a(t_stack_node **a, t_stack_node **b);
+
+
 
 #endif

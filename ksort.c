@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 17:45:21 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 14:51:50 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:09:22 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void push_to_b(t_stack_node **a, t_stack_node **b, int range)
 		}
 		else
 			ra(a);
-		i++;
 	}
 }
 
@@ -48,7 +47,7 @@ void push_to_a(t_stack_node **a, t_stack_node **b)
 	while (*b)
 	{
 		size = stack_len(*b);
-		max_node = find_node(*b);
+		max_node = find_max(*b);
 		pos = get_pos(*b, max_node);
 
 		if (pos <= size / 2)
