@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:00:11 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 10:37:30 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/17 12:26:44 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,3 +68,29 @@ int	get_range(int len)
 	return (32);
 }
 
+t_stack_node *find_max(t_stack_node *stack)
+{
+	int					max;
+	t_stack_node		*max_node;
+
+	if (!stack)
+		return (NULL);
+	// asign value to var
+	max = stack->index;
+	max_node = stack;
+	while (stack)
+	{
+		if (stack->index > max)
+		{
+			max = stack->index;
+			max_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (max_node);
+}
+
+int get_pos(t_stack_node *a, t_stack_node *b)
+{
+	
+}
