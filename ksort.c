@@ -6,19 +6,22 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 17:45:21 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 15:09:22 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:48:46 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// primer if, si el primer numero del stack a es menor que el contador, pasa a pb,
-// eel segundo si es menor que la suma del rango y el i pasa como ultima posicion,
-//, si no esta en el rango salta al final del stack esperando a que pase a la ultima posicion, hasya que pueda segir con el bucle
+// primer if, si el primer numero del stack a es menor que el contador,psa a pb
+// eel segundo si es menor que la suma del rango y el i pasa como ultima posici
+//, si no esta en el rango salta al final del stack esperando a que pase a la 
+//ultima 
+// posicion, hasya que pueda segir con el bucle
 
-void push_to_b(t_stack_node **a, t_stack_node **b, int range)
+void	push_to_b(t_stack_node **a, t_stack_node **b, int range)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	while (*a)
 	{
@@ -38,18 +41,17 @@ void push_to_b(t_stack_node **a, t_stack_node **b, int range)
 	}
 }
 
-void push_to_a(t_stack_node **a, t_stack_node **b)
+void	push_to_a(t_stack_node **a, t_stack_node **b)
 {
-	t_stack_node *max_node;
-	int size;
-	int pos;
+	t_stack_node	*max_node;
+	int				size;
+	int				pos;
 
 	while (*b)
 	{
 		size = stack_len(*b);
 		max_node = find_max(*b);
 		pos = get_pos(*b, max_node);
-
 		if (pos <= size / 2)
 		{
 			while (*b != max_node)

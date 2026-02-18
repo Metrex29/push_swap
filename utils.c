@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:00:11 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 15:26:48 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:45:37 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@
  *    otherwise the computed indices will be incorrect.
  *  - Duplicate values will result in identical indices for those nodes.
  */
-void ft_index_node(t_stack_node *stack)
+void	ft_index_node(t_stack_node *stack)
 {
 	t_stack_node	*current;
 	t_stack_node	*cmp;
@@ -64,19 +64,18 @@ void ft_index_node(t_stack_node *stack)
 
 int	get_range(int len)
 {
-	if(len <= 100)
+	if (len <= 100)
 		return (16);
 	return (32);
 }
 
-t_stack_node *find_max(t_stack_node *stack)
+t_stack_node	*find_max(t_stack_node *stack)
 {
 	int					max;
 	t_stack_node		*max_node;
 
 	if (!stack)
 		return (NULL);
-	// asign value to var
 	max = stack->index;
 	max_node = stack;
 	while (stack)
@@ -103,14 +102,15 @@ t_stack_node *find_max(t_stack_node *stack)
  * @objetive: Node to locate.
  * Returns the index if found, otherwise the list length.
  */
-int get_pos(t_stack_node *stack, t_stack_node *objetive)
+int	get_pos(t_stack_node *stack, t_stack_node *objetive)
 {
-	int pos;
+	int	pos;
+
 	pos = 0;
-	while(stack)
+	while (stack)
 	{
-		if(stack == objetive)
-			return pos;
+		if (stack == objetive)
+			return (pos);
 		pos++;
 		stack = stack->next;
 	}

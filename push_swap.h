@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 15:07:01 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:39:13 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include "libft/libft.h"
-
 
 typedef struct s_stack_node
 {
@@ -50,7 +49,7 @@ void			rb(t_stack_node **b);
 //rrotate
 void			rra(t_stack_node **a);
 void			rrb(t_stack_node **b);
-void			rrr(t_stack_node **a,t_stack_node **b);
+void			rrr(t_stack_node **a, t_stack_node **b);
 
 //push
 void			pa(t_stack_node **a, t_stack_node **b);
@@ -66,9 +65,7 @@ int				get_range(int len);
 t_stack_node	*find_max(t_stack_node *stack);
 int				get_pos(t_stack_node *stack, t_stack_node *objetive);
 //ksort
-void push_to_b(t_stack_node **a, t_stack_node **b, int range);
-void push_to_a(t_stack_node **a, t_stack_node **b);
-
-
+void			push_to_b(t_stack_node **a, t_stack_node **b, int range);
+void			push_to_a(t_stack_node **a, t_stack_node **b);
 
 #endif

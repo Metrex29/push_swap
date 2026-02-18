@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 16:19:58 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/17 15:32:56 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:47:33 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 // case 3: 2,0,1
 // case 4: 1,2,0
 // case 5: 0,2,1
-void sort_three(t_stack_node **stack)
+void	sort_three(t_stack_node **stack)
 {
-	int first;
-	int second;
-	int third;
+	int	first;
+	int	second;
+	int	third;
 
 	first = (*stack)->index;
 	second = (*stack)->next->index;
@@ -44,7 +44,7 @@ void sort_three(t_stack_node **stack)
 	}
 }
 
-void sort_four(t_stack_node **a, t_stack_node **b)
+void	sort_four(t_stack_node **a, t_stack_node **b)
 {
 	if ((*a)->next->index == 0)
 		sa(a);
@@ -60,7 +60,7 @@ void sort_four(t_stack_node **a, t_stack_node **b)
 	pa(a, b);
 }
 
-void sort_five(t_stack_node **a, t_stack_node **b)
+void	sort_five(t_stack_node **a, t_stack_node **b)
 {
 	if ((*a)->next->index == 0)
 		sa(a);
@@ -80,5 +80,3 @@ void sort_five(t_stack_node **a, t_stack_node **b)
 	sort_four(a, b);
 	pa(a, b);
 }
-
-

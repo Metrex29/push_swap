@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 18:22:08 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/03 13:02:16 by raulp            ###   ########.fr       */
+/*   Updated: 2026/02/18 17:29:23 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void init_stack_a(t_stack_node **a, char **argv)
+void	init_stack_a(t_stack_node **a, char **argv)
 {
-	long n;
-	int i;
+	long	n;
+	int		i;
 
 	i = 0;
 	while (argv[i])
