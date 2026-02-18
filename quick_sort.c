@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 16:19:58 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/18 17:47:33 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:51:38 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,17 @@ void	sort_three(t_stack_node **stack)
 
 void	sort_four(t_stack_node **a, t_stack_node **b)
 {
-	if ((*a)->next->index == 0)
+	int	min;
+
+	min = find_min(*a)->index;
+	if ((*a)->next->index == min)
 		sa(a);
-	else if ((*a)->next->next->index == 0)
+	else if ((*a)->next->next->index == min)
 	{
 		ra(a);
 		ra(a);
 	}
-	else if ((*a)->next->next->next->index == 0)
+	else if ((*a)->next->next->next->index == min)
 		rra(a);
 	pb(b, a);
 	sort_three(a);
@@ -62,19 +65,22 @@ void	sort_four(t_stack_node **a, t_stack_node **b)
 
 void	sort_five(t_stack_node **a, t_stack_node **b)
 {
-	if ((*a)->next->index == 0)
+	int	min;
+
+	min = find_min(*a)->index;
+	if ((*a)->next->index == min)
 		sa(a);
-	else if ((*a)->next->next->index == 0)
+	else if ((*a)->next->next->index == min)
 	{
 		ra(a);
 		ra(a);
 	}
-	else if ((*a)->next->next->next->index == 0)
+	else if ((*a)->next->next->next->index == min)
 	{
 		rra(a);
 		rra(a);
 	}
-	else if ((*a)->next->next->next->next->index == 0)
+	else if ((*a)->next->next->next->next->index == min)
 		rra(a);
 	pb(b, a);
 	sort_four(a, b);

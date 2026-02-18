@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/18 19:13:22 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:53:21 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void			init_stack_a(t_stack_node **a, char **argv);
 void			ft_index_node(t_stack_node *stack);
 int				stack_len(t_stack_node *stack);
 int				is_sorted(t_stack_node *stack);
+t_stack_node	*find_min(t_stack_node *stack);
 
 // movements---------------------------------------------------------
 //swap:
@@ -64,7 +65,6 @@ int				get_range(int len);
 t_stack_node	*find_max(t_stack_node *stack);
 int				get_pos(t_stack_node *stack, t_stack_node *objetive);
 long			ft_atoi(const char *str);
-size_t			ft_strlen(const char *s);
 char			**ft_split(char const *s, char c);
 
 // clean
