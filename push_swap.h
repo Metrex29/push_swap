@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/18 18:21:27 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:13:22 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,13 @@ int				get_range(int len);
 t_stack_node	*find_max(t_stack_node *stack);
 int				get_pos(t_stack_node *stack, t_stack_node *objetive);
 long			ft_atoi(const char *str);
+size_t			ft_strlen(const char *s);
+char			**ft_split(char const *s, char c);
+
 // clean
 void			free_stack(t_stack_node **stack);
-int	is_number(char *str);
-void if_error(t_stack_node **stack);
-
-
+int				is_number(char *str);
+void			if_error(t_stack_node **stack, char **argv);
 
 //ksort
 void			push_to_b(t_stack_node **a, t_stack_node **b, int range);

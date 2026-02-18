@@ -6,7 +6,7 @@
 #    By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/17 15:00:00 by cpicon-m          #+#    #+#              #
-#    Updated: 2026/02/18 17:57:36 by cpicon-m         ###   ########.fr        #
+#    Updated: 2026/02/18 19:03:04 by cpicon-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,15 +25,15 @@ SRC         = push_swap.c \
               quick_sort.c \
               ksort.c \
               utils.c \
-              checkers.c
+              checkers.c \
+              split.c
 
 OBJ         = $(SRC:.c=.o)
 
 # Regla para compilar el ejecutable final
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
-	@echo "$(GREEN)Push_swap compilado con éxito.$(RESET)"
-
+	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@echo "Push_swap compilado con éxito."
 # Compilación de objetos individuales
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -41,13 +41,11 @@ $(NAME): $(OBJ)
 # Limpieza de archivos objeto
 clean:
 	@rm -f $(OBJ)
-	@make -C $(LIBFT_DIR) clean
 	@echo "Objetos eliminados."
 
 # Limpieza total
 fclean: clean
 	@rm -f $(NAME)
-	@make -C $(LIBFT_DIR) fclean
 	@echo "Ejecutable y librerías eliminados."
 
 # Recompilación total

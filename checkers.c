@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 19:11:44 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/18 18:18:34 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:10:03 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,24 @@ int	is_sorted(t_stack_node *stack)
 	}
 	return (1);
 }
+
 void	free_stack(t_stack_node **stack)
 {
-	t_stack_node *tmp;
-	t_stack_node *current;
+	t_stack_node	*tmp;
+	t_stack_node	*current;
 
 	if (!stack || !*stack)
-		return;
+		return ;
 	current = *stack;
 	while (current)
 	{
 		tmp = current->next;
 		free(current);
 		current = tmp;
-    }
+	}
 	*stack = NULL;
 }
+
 int	is_number(char *str)
 {
 	int	i;
