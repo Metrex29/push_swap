@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:00:11 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/18 17:56:53 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 18:19:54 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,18 +90,6 @@ t_stack_node	*find_max(t_stack_node *stack)
 	return (max_node);
 }
 
-/**
- * get_pos - Get zero-based index of a node in a stack.
- * @stack: head of the list.
- * @objetive: node to locate.
- * Return: index if found, otherwise the list length.
- */
-/**
- * get_pos - Return zero-based index of a node in a stack.
- * @stack: Head of the list.
- * @objetive: Node to locate.
- * Returns the index if found, otherwise the list length.
- */
 int	get_pos(t_stack_node *stack, t_stack_node *objetive)
 {
 	int	pos;

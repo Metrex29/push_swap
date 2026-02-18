@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 11:24:50 by raulp             #+#    #+#             */
-/*   Updated: 2026/02/18 17:46:43 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 18:07:53 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ int	main(int argc, char **argv)
 	else
 		push_to_b(&a, &b, get_range(len));
 	push_to_a(&a, &b);
+	free_stack(&a);
+	free_stack(&b);
 	return (0);
 }
