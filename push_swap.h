@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/18 17:39:13 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:59:22 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <unistd.h>
-# include "libft/libft.h"
+#include <limits.h>
 
 typedef struct s_stack_node
 {
@@ -64,6 +64,8 @@ void			sort_five(t_stack_node **a, t_stack_node **b);
 int				get_range(int len);
 t_stack_node	*find_max(t_stack_node *stack);
 int				get_pos(t_stack_node *stack, t_stack_node *objetive);
+long			ft_atoi(const char *str);
+
 //ksort
 void			push_to_b(t_stack_node **a, t_stack_node **b, int range);
 void			push_to_a(t_stack_node **a, t_stack_node **b);

@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:00:11 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/18 17:45:37 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:56:53 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,4 +115,31 @@ int	get_pos(t_stack_node *stack, t_stack_node *objetive)
 		stack = stack->next;
 	}
 	return (pos);
+}
+
+long	ft_atoi(const char *str)
+{
+	int		i;
+	int		value;
+	long	result;
+
+	value = 1;
+	i = 0;
+	result = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			value *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		if (result * value > INT_MAX || result * value < INT_MIN)
+			return (2147483648L);
+		i++;
+	}
+	return (result * value);
 }
