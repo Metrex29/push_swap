@@ -6,7 +6,7 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:35:31 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/18 19:53:21 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 21:25:50 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
-// Prototipos
 t_stack_node	*ft_new_node(int value);
 t_stack_node	*find_last(t_stack_node *stack);
 int				check_duplicates(t_stack_node *stack, int n);

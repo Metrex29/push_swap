@@ -6,17 +6,11 @@
 /*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 17:45:21 by cpicon-m          #+#    #+#             */
-/*   Updated: 2026/02/18 17:48:46 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2026/02/18 21:11:37 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// primer if, si el primer numero del stack a es menor que el contador,psa a pb
-// eel segundo si es menor que la suma del rango y el i pasa como ultima posici
-//, si no esta en el rango salta al final del stack esperando a que pase a la 
-//ultima 
-// posicion, hasya que pueda segir con el bucle
 
 void	push_to_b(t_stack_node **a, t_stack_node **b, int range)
 {
